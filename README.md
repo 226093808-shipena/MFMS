@@ -17,7 +17,7 @@ The Municipal Financial Management System (MFMS) is a C-based application design
 ## Team Members & Responsibilities
  * **Lain L.S(2250008912) 1:** Employee Management
  * **Iiyambo A.Q(226023311) 2:** Budget Management
- * **Student 3:** Supplier Management
+ * **Hamutenya R.H(226093360) 3:** Supplier Management
  * **Student 4:** Asset Management
  * **Student 5:** Reports
  * **Student 6:** Functions, Integration & Validation
