@@ -106,4 +106,4 @@ void assetMenu() {
             default: printf("Invalid option.\n");
         }
     } while(choice != 4);
-}
+}// Update by Wilhelmina
