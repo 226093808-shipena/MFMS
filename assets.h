@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 
@@ -16,6 +17,15 @@ typedef struct {
 // global array and counter
 Asset assets[MAX_ASSETS];
 int assetCount = 0;
+void assetMenu();
+void addAsset();
+void displayAssets();
+void searchAsset();
+// main function at the top (as taught at school)
+int main() {
+    assetMenu();
+    return 0;
+}
 
 // add new asset
 void addAsset() {
@@ -94,7 +104,7 @@ void assetMenu() {
         printf("1. Add Asset\n");
         printf("2. Display Assets\n");
         printf("3. Search Asset\n");
-        printf("4. Back\n");
+        printf("4. Exit\n");
         printf("Choice: ");
         scanf("%d", &choice);
 
@@ -102,8 +112,8 @@ void assetMenu() {
             case 1: addAsset(); break;
             case 2: displayAssets(); break;
             case 3: searchAsset(); break;
-            case 4: break;
+            case 4: printf("Exiting...\n"); break;
             default: printf("Invalid option.\n");
         }
     } while(choice != 4);
-}// Update by Wilhelmina
+}
