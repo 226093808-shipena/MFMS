@@ -1,9 +1,6 @@
-/**
- * @file    budget.c
- * @brief   Implementation of the Budget Management module for MFMS.
- * @course  PAP521S - Programming in Practice
- * @project Project A - Foundation System
- */
+// budget.c
+//Budget Management module for the MFMS project (PAP521S Project A)
+//This file handles department budgets, expenditure, and over-budget reporting.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,12 +11,8 @@
 /*  Internal Helper Functions (static - not exposed in header)         */
 /* ================================================================== */
 
-/**
- * @brief  Safely reads a line of text into a buffer, stripping the newline.
- * @param  buffer  Destination buffer.
- * @param  size    Size of the buffer.
- * @return 1 on success, 0 on failure/EOF.
- */
+//Reads one line of input and removes the trailing newline character
+//  Returns 1 on success, 0 on error or end of input
 static int readLine(char *buffer, int size)
 {
     if (fgets(buffer, size, stdin) == NULL) {
@@ -29,12 +22,8 @@ static int readLine(char *buffer, int size)
     return 1;
 }
 
-/**
- * @brief  Reads and validates a non-negative double from stdin.
- * @param  prompt   Message shown to the user.
- * @param  result   Pointer to store the validated number.
- * @return 1 on success, 0 on fatal failure.
- */
+// Reads a non-negative decimal number from input
+// Validates that it is a real number and non-negative
 static int readNonNegativeDouble(const char *prompt, double *result)
 {
     char   line[64];
