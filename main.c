@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "validation.h"
 
 #include "employees.h"
 #include "budget.h"
@@ -8,21 +8,7 @@
 #include "assets.h"
 #include "reports.h"
 
-int getValidIntOption(int min, int max) {
-    int choice;
-    while (1) {
-        printf("Enter your choice (%d-%d): ", min, max);
-        if (scanf("%d", &choice) == 1 && choice >= min && choice <= max) {
-            while (getchar() != '\n'); 
-            return choice;
-        } else {
-            printf("Invalid input! Please enter a valid number.\n");
-            while (getchar() != '\n'); 
-        }
-    }
-}
-
-void displayMainMenu() {
+void displayMainMenu(void) {
     printf("\n===========================================\n");
     printf("   MUNICIPAL FINANCIAL MANAGEMENT SYSTEM   \n");
     printf("===========================================\n");
@@ -35,10 +21,7 @@ void displayMainMenu() {
     printf("===========================================\n");
 }
 
-int main() {
-    Supplier suppliers[MAX_SUPPLIERS];
-    int supplierCount = 0;
-
+int main(void) {
     int choice;
 
     do {
@@ -54,12 +37,6 @@ int main() {
                 break;
             case 3:
                 printf("\n--- SUPPLIER MANAGEMENT ---\n");
-                printf("1. Add Supplier\n2. Display Suppliers\n3. Search Supplier\n4. Compare Locations\nEnter option: ");
-                int supChoice = getValidIntOption(1, 4);
-                if (supChoice == 1) addSupplier(suppliers, &supplierCount);
-                else if (supChoice == 2) displaySuppliers(suppliers, supplierCount);
-                else if (supChoice == 3) searchSupplier(suppliers, supplierCount);
-                else if (supChoice == 4) compareSuppliersByLocation(suppliers, supplierCount);
                 break;
             case 4:
                 printf("\n--- ASSET MANAGEMENT ---\n");
