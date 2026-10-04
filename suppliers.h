@@ -18,5 +18,5 @@ void addSupplier(Supplier suppliers[], int *count);
 void displaySuppliers(const Supplier suppliers[], int count);
 void searchSupplier(const Supplier suppliers[], int count);
 void compareSuppliersByLocation(const Supplier suppliers[], int count);
-
+void supplierMenu();
 #endif

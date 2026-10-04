@@ -109,3 +109,40 @@ void compareSuppliersByLocation(const Supplier suppliers[], int count) {
         printf("No suppliers found in '%s'.\n", targetLocation);
     }
 }
+
+void supplierMenu() {
+    Supplier suppliers[MAX_SUPPLIERS];
+    int supplierCount = 0;
+    int choice;
+
+    do {
+        printf("\n=== SUPPLIER MANAGEMENT ===\n");
+        printf("1. Add Supplier\n");
+        printf("2. Display Suppliers\n");
+        printf("3. Search Supplier by Name\n");
+        printf("4. Compare Suppliers by Location\n");
+        printf("5. Return to Main Menu\n");
+        printf("Enter your choice (1-5): ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                addSupplier(suppliers, &supplierCount);
+                break;
+            case 2:
+                displaySuppliers(suppliers, supplierCount);
+                break;
+            case 3:
+                searchSupplier(suppliers, supplierCount);
+                break;
+            case 4:
+                compareSuppliersByLocation(suppliers, supplierCount);
+                break;
+            case 5:
+                printf("Returning to main menu...\n");
+                break;
+            default:
+                printf("Invalid choice! Please enter a number between 1 and 5.\n");
+        }
+    } while(choice != 5);
+}

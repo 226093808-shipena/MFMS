@@ -1,17 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
-#define MAX_ASSETS 100   // limit of assets
-
-// structure for asset info
-typedef struct {
-    int assetID;
-    char name[50];
-    char type[30];
-    float purchaseValue;
-    char department[30];
-    char condition[20];
-} Asset;
+#include "assets.h"
 
 // global array and counter
 Asset assets[MAX_ASSETS];
