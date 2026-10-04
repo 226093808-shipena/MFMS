@@ -1,12 +1,12 @@
 #ifndef ASSETS_H
 #define ASSETS_H
 
-#include <stdio.h>
-#include <string.h>
+#ifndef ASSETS_H
+#define ASSETS_H
 
-#define MAX_ASSETS 100   // limit of assets
+#define MAX_ASSETS 100
 
-// structure for asset info
+// Asset structure
 typedef struct {
     int assetID;
     char name[50];
@@ -16,9 +16,7 @@ typedef struct {
     char condition[20];
 } Asset;
 
-// global array and counter
-extern Asset assets[MAX_ASSETS];
-extern int assetCount;
+// Function prototypes
 void assetMenu();
 void addAsset();
 void displayAssets();

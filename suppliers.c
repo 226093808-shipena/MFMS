@@ -17,7 +17,6 @@ void addSupplier(Supplier suppliers[], int *count) {
     printf("Enter Supplier Name: ");
     fgets(s.name, STR_LEN, stdin);
     s.name[strcspn(s.name, "\n")] = 0; 
-
     printf("Enter Email: ");
     fgets(s.email, STR_LEN, stdin);
     s.email[strcspn(s.email, "\n")] = 0;
