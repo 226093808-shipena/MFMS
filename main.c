@@ -27,7 +27,7 @@ int main(void) {
                 printf("\n[employee module]\n");
                 break;
             case 2:
-                printf("\n[budget module]\n");
+                budgetMenu();
                 break;
             case 3:
                 supplierMenu();
@@ -36,7 +36,7 @@ int main(void) {
                 assetMenu();
                 break;
             case 5:
-                printf("\n[Reports module]\n");
+                reportsMenu();
                 break;
 
             default:

@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include "employees.h"
+#include "budget.h"
+#include "suppliers.h"
+#include "assets.h"
 #include "reports.h"
 
 static double calculateEmployeeSalary(const Employee *employee)
@@ -56,7 +60,7 @@ void displayEmployeeReport(const Employee employees[], int employeeCount)
     }
 }
 
-void displayBudgetReport(const Budget budgets[], int budgetCount)
+void displayBudgetReport(const DepartmentBudget budgets[], int budgetCount)
 {
     int i;
     double totalAllocated = 0.0;
@@ -139,8 +143,8 @@ void displaySupplierReport(const Supplier suppliers[], int supplierCount)
                suppliers[i].supplierID,
                suppliers[i].name,
                suppliers[i].email,
-               suppliers[i].telephone,
-               suppliers[i].town);
+               suppliers[i].phone,
+               suppliers[i].location);
     }
 
     printf("\nTotal Suppliers: %d\n", supplierCount);
@@ -181,7 +185,7 @@ void displayAssetReport(const Asset assets[], int assetCount)
 }
 
 void displayAllReports(const Employee employees[], int employeeCount,
-                       const Budget budgets[], int budgetCount,
+                       const DepartmentBudget budgets[], int budgetCount,
                        const Supplier suppliers[], int supplierCount,
                        const Asset assets[], int assetCount)
 {
@@ -189,4 +193,45 @@ void displayAllReports(const Employee employees[], int employeeCount,
     displayBudgetReport(budgets, budgetCount);
     displaySupplierReport(suppliers, supplierCount);
     displayAssetReport(assets, assetCount);
+}
+void reportsMenu(void)
+{
+    int choice;
+
+    do {
+        printf("\n===========================================\n");
+        printf("               REPORTS MENU                \n");
+        printf("===========================================\n");
+        printf("1. Employee Report\n");
+        printf("2. Budget Report\n");
+        printf("3. Supplier Report\n");
+        printf("4. Asset Report\n");
+        printf("5. All Reports\n");
+        printf("6. Return to Main Menu\n");
+        printf("Enter your choice (1-6): ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                // Call function to display employee report
+                break;
+            case 2:
+                // Call function to display budget report
+                break;
+            case 3:
+                // Call function to display supplier report
+                break;
+            case 4:
+                // Call function to display asset report
+                break;
+            case 5:
+                // Call function to display all reports
+                break;
+            case 6:
+                printf("Returning to Main Menu...\n");
+                break;
+            default:
+                printf("Invalid choice! Please enter a number between 1 and 6.\n");
+        }
+    } while(choice != 6);
 }

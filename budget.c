@@ -257,6 +257,7 @@ void budgetMenu(void)
     static int count = 0;
 
     int choice;
+    int c; while ((c = getchar()) != '\n' && c != EOF); /* Clear input buffer */
 
     do {
         printf("\n");

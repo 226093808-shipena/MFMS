@@ -4,7 +4,7 @@
  **Group Number:** [12]
  **Project Name:** Municipal Financial Management System (MFMS)
 
-## Project Description
+## Project Description`
 The Municipal Financial Management System (MFMS) is a C-based application designed to assist municipalities with tracking employees, budgets, suppliers, assets, and generating overall system reports.
 
 ## System Features
