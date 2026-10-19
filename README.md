@@ -27,4 +27,4 @@ The Municipal Financial Management System (MFMS) is a C-based application design
 To compile the application using GCC, run the following command in your terminal:
 
 ```bash
-gcc main.c employees.c budget.c suppliers.c assets.c reports.c -o mfms
+gcc main.c employees.c budget.c suppliers.c assets.c reports.c validation.c -o mfms
