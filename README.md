@@ -15,7 +15,7 @@ The Municipal Financial Management System (MFMS) is a C-based application design
  * **Reports:** Generates financial and operational summary reports.
 
 ## Team Members & Responsibilities
- * **Lain L.S(2250008912) 1:** Employee Management
+ * **Laina L.S(2250008912) 1:** Employee Management
  * **Iiyambo A.Q(226023311) 2:** Budget Management
  * **Hamutenya R.H(226093360) 3:** Supplier Management
  * **Nghipandwa(225049686ss) 4:** Asset Management
