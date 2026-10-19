@@ -1,3 +1,4 @@
+#define MAX_EMPLOYEES 100
 #ifndef EMPLOYEES_H
 #define EMPLOYEES_H
 
@@ -5,13 +6,18 @@ typedef struct {
     int employeeID;
     char name[50];
     char department[50];
-    double basicSalary;
-    double housingAllowance;
-    double transportAllowance;
-    double otherAllowance;
+    float basicSalary;
+    float housingAllowance;
+    float transportAllowance;
+    float otherAllowance;
 } Employee;
+void employeeMenu(void);
+void addEmployee(void);
+void displayEmployees(void);
+void searchEmployee(void);
+void calculateSalary(void);
 
-void addEmployee(Employee employees[], int *employeeCount);
-void displayEmployees(const Employee employees[], int employeeCount);
+int findEmployeeByID(int employeeID);
+float getTotalSalary(Employee employee);
 
 #endif

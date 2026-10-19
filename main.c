@@ -24,7 +24,7 @@ int main(void) {
 
         switch(choice) {
             case 1:
-                printf("\n[employee module]\n");
+                employeeMenu();
                 break;
             case 2:
                 budgetMenu();
